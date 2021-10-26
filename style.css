@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  border: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body main {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main .container {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main .container__card {
+  height: 100px;
+  width: 150px;
+}
+
+body main .container__card img {
+  width: 50%;
+}
+
+body main .map {
+  width: 50%;
+  height: 100%;
+  background: grey;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+body main .map iframe {
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=style.css.map */
