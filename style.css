@@ -3,10 +3,93 @@
   border: 0;
 }
 
+.marker.leaflet-popup {
+  margin-bottom: 16px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  background: white;
+}
+
+.marker.leaflet-popup::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -8px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid white;
+}
+
+.leaflet-popup-content-wrapper .leaflet-popup-content .card__left img {
+  width: 100%;
+}
+
+.marker .leaflet-popup-content-wrapper {
+  background: transparent;
+  color: inherit;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-align: inherit;
+}
+
+.marker .leaflet-popup-tip-container {
+  display: none;
+}
+
+.marker .leaflet-popup-content {
+  text-align: inherit;
+  color: inherit;
+  margin: 0;
+}
+
+.marker.is-active,
+.marker:hover {
+  z-index: 2;
+  background: #5069ff;
+  color: #fff;
+}
+
+.marker.is-active::after,
+.marker:hover::after {
+  border-top-color: #5069ff;
+}
+
+.marker.is-expanded {
+  background-color: #fff !important;
+  color: inherit !important;
+  z-index: 3;
+  text-align: center;
+}
+
+.marker.is-expanded::after {
+  border-top-color: #fff !important;
+}
+
 body {
   height: 100vh;
   width: 100%;
   overflow-x: hidden;
+}
+
+body ::-webkit-scrollbar {
+  width: 10px;
+}
+
+body ::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+body ::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 body main {
@@ -23,29 +106,62 @@ body main .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 body main .container__card {
-  height: 100px;
-  width: 150px;
+  height: 200px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-body main .container__card img {
+body main .container__card:hover {
+  -webkit-transform: scale(1.08, 1.08);
+          transform: scale(1.08, 1.08);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body main .container__card .card__left {
   width: 50%;
+  height: 100%;
+}
+
+body main .container__card .card__left img {
+  width: 50%;
+}
+
+body main .container__card .card__right {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 body main .map {
   width: 50%;
   height: 100%;
-  background: grey;
   position: -webkit-sticky;
   position: sticky;
-}
-
-body main .map iframe {
-  width: 100%;
-  height: 100%;
 }
 /*# sourceMappingURL=style.css.map */
