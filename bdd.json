@@ -1,13 +1,35 @@
 {
     "marque": [{
         "name": "Kanda",
-        "data-lat": "48817",
-        "data-lng": "2255"
+        "description": "Kanda",
+        "department": "Kanda",
+        "region": "Kanda",
+        "datalat": "48817",
+        "datalng": "2255"
 
     }, {
         "name": "Le mousse",
-        "data-lat": "48857",
-        "data-lng": "2275"
+        "department": "Kanda",
+        "description": "Kanda",
+        "region": "Kanda",
+        "datalat": "48857",
+        "datalng": "2275"
+
+    }, {
+        "name": "Le mousse",
+        "department": "Kanda",
+        "description": "Kanda",
+        "region": "Kanda",
+        "datalat": "48957",
+        "datalng": "2282"
+
+    }, {
+        "name": "Le mousse",
+        "department": "Kanda",
+        "description": "Kanda",
+        "region": "Kanda",
+        "datalat": "48867",
+        "datalng": "2285"
 
     }]
 
